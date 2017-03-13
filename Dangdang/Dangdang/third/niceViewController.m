@@ -1,26 +1,22 @@
 //
-//  FourViewController.m
+//  niceViewController.m
 //  Dangdang
 //
 //  Created by 查传申 on 2017/3/13.
 //  Copyright © 2017年 查传申. All rights reserved.
 //
 
-#import "FourViewController.h"
+#import "niceViewController.h"
 
-@interface FourViewController ()
+@interface niceViewController ()
 
 @end
 
-@implementation FourViewController
+@implementation niceViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIButton *button = nil;
-    UIButton *button1 = nil;
-    UIButton *button2 = nil;
-    
 }
 
 - (void)didReceiveMemoryWarning {

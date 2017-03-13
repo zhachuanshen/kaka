@@ -16,6 +16,7 @@
 		AA3C13AD1E763A4300E20A3C /* DangdangTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C13AC1E763A4300E20A3C /* DangdangTests.m */; };
 		AA3C13B81E763A4300E20A3C /* DangdangUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C13B71E763A4300E20A3C /* DangdangUITests.m */; };
 		AA3C13C81E7641D200E20A3C /* FourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C13C71E7641D200E20A3C /* FourViewController.m */; };
+		AA3C13CC1E76921300E20A3C /* niceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3C13CB1E76921300E20A3C /* niceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		AA3C13B91E763A4300E20A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3C13C61E7641D200E20A3C /* FourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourViewController.h; sourceTree = "<group>"; };
 		AA3C13C71E7641D200E20A3C /* FourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourViewController.m; sourceTree = "<group>"; };
+		AA3C13CA1E76921300E20A3C /* niceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = niceViewController.h; sourceTree = "<group>"; };
+		AA3C13CB1E76921300E20A3C /* niceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = niceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		AA3C13911E763A4300E20A3C /* Dangdang */ = {
 			isa = PBXGroup;
 			children = (
+				AA3C13C91E76920600E20A3C /* third */,
 				AA3C13C51E7641B300E20A3C /* four */,
 				AA3C13951E763A4300E20A3C /* AppDelegate.h */,
 				AA3C13961E763A4300E20A3C /* AppDelegate.m */,
@@ -151,6 +155,15 @@
 				AA3C13C71E7641D200E20A3C /* FourViewController.m */,
 			);
 			path = four;
+			sourceTree = "<group>";
+		};
+		AA3C13C91E76920600E20A3C /* third */ = {
+			isa = PBXGroup;
+			children = (
+				AA3C13CA1E76921300E20A3C /* niceViewController.h */,
+				AA3C13CB1E76921300E20A3C /* niceViewController.m */,
+			);
+			path = third;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3C139A1E763A4300E20A3C /* ViewController.m in Sources */,
+				AA3C13CC1E76921300E20A3C /* niceViewController.m in Sources */,
 				AA3C13971E763A4300E20A3C /* AppDelegate.m in Sources */,
 				AA3C13C81E7641D200E20A3C /* FourViewController.m in Sources */,
 				AA3C13941E763A4300E20A3C /* main.m in Sources */,
