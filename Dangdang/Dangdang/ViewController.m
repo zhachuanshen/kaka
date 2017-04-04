@@ -49,6 +49,7 @@
     _label_title.backgroundColor = [UIColor blueColor];
     _label_text.backgroundColor = [UIColor lightGrayColor];
     _label_text.text = @"lsafijsalfj";
+    //asdasdasdasdsad
     _label_text.numberOfLines = 0;
     
 }
