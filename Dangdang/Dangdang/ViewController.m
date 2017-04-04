@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "NewTableViewCell.h"
 #import "Masonry.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UILabel *label_title;
@@ -65,7 +66,7 @@
         _tableView.backgroundColor = [UIColor greenColor];
         _tableView.dataSource = self;
         _tableView.delegate = self;
-        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuse"];
+        [_tableView registerClass:[NewTableViewCell class] forCellReuseIdentifier:@"reuse"];
     }
     return _tableView;
     
@@ -74,14 +75,19 @@
     return 10;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse"];
-    cell.textLabel.text = @"asdasdsa";
+    NewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse"];
+    [cell setDic:@{@"id":@"sdasasd"}];
     
     return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 40;
+  NewTableViewCell *cell = (NewTableViewCell *)[self tableView:_tableView cellForRowAtIndexPath:indexPath];
     
+    return cell.height;
+    
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 -(void)news{
     self.label_text.text = @"aslkdjsalkdjslakdjlksajdkjsaldkjaslkdjalkdjlaksjdlkasjdlkjsadjlsad";
@@ -92,8 +98,10 @@
         make.bottom.equalTo(self.label_text);
         
     }];
+    [self.View_header.superview layoutIfNeeded];
+    CGFloat height = self.View_header.frame.size.height;
 
-    CGFloat height = [self.View_header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    CGFloat height = [self.View_header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     _headView.frame = CGRectMake(_headView.frame.origin.x, 0, _headView.frame.size.width, height+10);
     
     self.tableView.tableHeaderView = _headView;
@@ -103,6 +111,7 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view).insets(UIEdgeInsetsMake(10, 10, 10, 10));
     }];
+    
     [self.View_header mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.headView);
         make.right.equalTo(self.headView);
@@ -129,8 +138,10 @@
         make.bottom.equalTo(self.label_text);
 
     }];
-    CGFloat height = [self.View_header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    _headView.frame = CGRectMake(10, 0, self.view.frame.size.width-20, height+10);
+      [self.View_header.superview layoutIfNeeded];
+    CGFloat height = self.View_header.frame.size.height;
+//    CGFloat height = [self.View_header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    _headView.frame = CGRectMake(0, 0, self.view.frame.size.width-20, height+10);
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
