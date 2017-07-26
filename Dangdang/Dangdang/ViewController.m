@@ -91,6 +91,7 @@
 }
 -(void)news{
     self.label_text.text = @"aslkdjsalkdjslakdjlksajdkjsaldkjaslkdjalkdjlaksjdlkasjdlkjsadjlsad";
+//    asdasdsad
     [self.View_header mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.headView);
         make.right.equalTo(self.headView);
